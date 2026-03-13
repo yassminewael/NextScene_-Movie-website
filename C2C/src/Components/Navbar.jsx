@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleSearch = (e) => {
+  function handleSearch(e) {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/search?q=${searchQuery}`);
       setIsMobileMenuOpen(false);
     }
-  };
+  }
 
-  const toggleMenu = () => {
+  function toggleMenu() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  }
 
   return (
     <nav className="navbar">
