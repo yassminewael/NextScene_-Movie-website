@@ -43,15 +43,16 @@ function Navbar() {
 
         <div className="nav-right">
           <form className="search-bar" onSubmit={handleSearch}>
-            <input 
-              type="text" 
-              placeholder="Search..." 
+            <input
+              type="text"
+              placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </form>
-          
-          <Link to="/Signup" className="sign-in-btn">Sign up</Link>
+
+          <Link to="/login" className="sign-in-btn" style={{ marginRight: '10px', background: 'transparent', color: 'white', border: '1px solid white' }}>Log in</Link>
+          <Link to="/signup" className="sign-in-btn">Sign up</Link>
         </div>
       </div>
     </nav>
